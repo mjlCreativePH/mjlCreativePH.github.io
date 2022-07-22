@@ -4,7 +4,8 @@ import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import BackgroundImage from "../components/Main/BackgroundImage";
 import ButtonPrimary from "../components/Main/ButtonPrimary";
-import Heading from "../components/Main/Heading";
+import TitlePrimary from "../components/Main/TitlePrimary";
+import TitleSecondary from "../components/Main/TitleSecondary";
 
 export default function Home() {
   return (
@@ -20,9 +21,12 @@ export default function Home() {
           <div className="container max-w-full px-2 md:px-4 lg:12">
             <div className="flex justify-center items-center flex-col lg:flex-row">
               <div className="flex justify-center flex-col relative w-full h-full lg:w-5/12 lg:max-w-5/12 px-4">
-                <Heading heading1="THE STORY" heading2="ABOUT US" />
+                <div className="flex justify-center flex-col text-center border-y border-y-personal-neutralLight mb-12 py-4">
+                  <TitlePrimary title="ABOUT US" />
+                  <TitleSecondary title="OUR TEAM" />
+                </div>
                 <div className="flex justify-center flex-col items-start mb-4">
-                  <p className="mb-12">
+                  <p className="mb-10">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Deleniti quo, velit, nobis nihil officia et adipisci eum
                     tenetur unde autem animi sit possimus ad aliquam sint, ut
@@ -40,9 +44,12 @@ export default function Home() {
             <div className="flex justify-center items-center flex-col lg:flex-row">
               <BackgroundImage url="/chicken.jpg" alt="Chicken" />
               <div className="flex justify-center flex-col relative w-full h-full lg:w-5/12 lg:max-w-5/12 px-4">
-                <Heading heading1="WHAT'S ON" heading2="THE MENU" />
+                <div className="flex justify-center flex-col text-center border-y border-y-personal-neutralLight mb-12 py-4">
+                  <TitleSecondary title="WHAT'S ON" />
+                  <TitlePrimary title="THE MENU" />
+                </div>
                 <div className="flex justify-center flex-col items-start">
-                  <p className="mb-12">
+                  <p className="mb-10">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Deleniti quo, velit, nobis nihil officia et adipisci eum
                     tenetur unde autem animi sit possimus ad aliquam sint, ut

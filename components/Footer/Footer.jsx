@@ -1,13 +1,16 @@
-import React from "react";
 import FooterLink from "./FooterLink";
 import FooterImage from "./FooterImage";
+import React, { useState } from "react";
 
 const Footer = () => {
+  const [builtBy, setBuiltBy] = useState(true);
+
   return (
-    <>
-      <div className="flex justify-center items-center bg-personal-primary h-2/4 max-h-64">
-        <div className="container flex justify-center flex-col sm:flex-row items-center">
-          <div className="flex items-center flex-col md:flex-row">
+    <div>
+      {builtBy && 
+      <div className="hidden sm:flex justify-center items-center bg-gradient-to-r from-personal-secondary to-personal-primary h-2/4 max-h-64">
+        <div className="container flex justify-center flex-row items-center">
+          <div className="flex items-center">
             <p className="text-sm text-white font-semibold pr-2">
               This website is built with love by,
             </p>
@@ -18,11 +21,12 @@ const Footer = () => {
               MJLDev
             </a>
           </div>
-          <button className="text-white font-mono font-semibold text-3xl">
+          <button onClick={() => setBuiltBy(false)} className="text-white font-mono font-semibold text-3xl">
             &times;
           </button>
         </div>
       </div>
+      }
       <div className="grid grid-flow-row justify-center gap-y-8 text-center h-auto w-full py-10 md:py-20">
         <p className="font-Oswald font-bold text-5xl lg:text-6xl text-black">
           MJL KITCHEN
@@ -60,7 +64,7 @@ const Footer = () => {
         </div>
         <p className="text-personal-neutralLight">©2022 MJL Kitchen</p>
       </div>
-    </>
+    </div>
   );
 };
 
