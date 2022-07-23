@@ -25,7 +25,7 @@ const Navbar = () => {
     <nav className="flex flex-col sticky z-50 bg-white left-0 top-0 right-0 bottom-0 py-6">
       <div className="container flex flex-wrap justify-between items-center max-w-full px-4 md:px-8 lg:px-16">
         <Link href="/">
-          <a className="text-personal-neutral font-Oswald text-3xl md:text-4xl lg:text-5xl font-bold">
+          <a className="text-personal-neutral font-Oswald text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter">
             MJL KITCHEN
           </a>
         </Link>

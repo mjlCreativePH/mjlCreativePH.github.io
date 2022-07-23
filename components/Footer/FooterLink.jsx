@@ -4,7 +4,7 @@ import Link from 'next/link'
 const FooterLink = (props) => {
   return (
     <Link href={props.url}>
-        <a className={props.className}>{props.children}</a>
+        <a className="text-personal-neutralLight px-2 hover:underline">{props.children}</a>
     </Link>
   )
 }
