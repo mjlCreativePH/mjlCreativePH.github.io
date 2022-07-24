@@ -33,11 +33,11 @@ const Navbar = () => {
           onClick={closeNavbarMenu}
           className={
             dropdown
-              ? "flex justify-center flex-col bg-gray-200 text-center text-xl font-bold left-0 right-0 mt-64 py-12 absolute duration-700 ease-in-out"
+              ? "flex justify-center flex-col bg-gray-100 text-center text-xl font-bold left-0 right-0 mt-64 py-12 absolute duration-700 ease-in-out"
               : "relative -mt-64 md:mt-0 text-lg flex font-bold text-black gap-8 items-center"
           }
         >
-          <NavLink url="#">OUR MENU</NavLink>
+          <NavLink url="/our-menu">OUR MENU</NavLink>
           <NavLink url="#">CONTACT US</NavLink>
         </ul>
         <div

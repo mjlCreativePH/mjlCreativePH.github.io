@@ -1,12 +1,16 @@
 import Head from "next/head";
 import Footer from "../components/Footer/Footer";
-import Header from "../components/Header/Header";
 import BackgroundImage from "../components/Main/BackgroundImage";
-import ButtonPrimary from "../components/Main/ButtonPrimary";
+import ButtonPrimary from "../components/Button/ButtonPrimary";
 import TitlePrimary from "../components/Main/TitlePrimary";
 import TitleSecondary from "../components/Main/TitleSecondary";
-import cook from '/assets/images/cook.jpg';
-import chicken from '/assets/images/chicken.jpg';
+import cook_bg from "/assets/images/cook_bg.jpg";
+import chicken_bg from "/assets/images/chicken_bg.jpg";
+import BannerImage from "../components/Header/BannerImage";
+import Overlay from "../components/Header/Overlay";
+import banner from "/assets/images/banner.jpg";
+import HeadingPrimary from "../components/Header/HeadingPrimary";
+import Carousel from "../components/Carousel/Carousel";
 
 export default function Home() {
   return (
@@ -15,7 +19,7 @@ export default function Home() {
         <title>MJL Kitchen</title>
       </Head>
       <header className="mb-10">
-        <Header />
+        <Carousel />
       </header>
       <main>
         <section className="relative overflow-hidden mb-10">
@@ -36,14 +40,14 @@ export default function Home() {
                   <ButtonPrimary url="#">CONTACT US</ButtonPrimary>
                 </div>
               </div>
-              <BackgroundImage url={cook.src} alt="Chicken" />
+              <BackgroundImage url={cook_bg.src} alt="Chicken" />
             </div>
           </div>
         </section>
         <section className="relative overflow-hidden mb-10">
           <div className="container max-w-full px-2 md:px-4 lg:12">
             <div className="flex justify-center items-center flex-col lg:flex-row">
-              <BackgroundImage url={chicken.src} alt="Chicken" />
+              <BackgroundImage url={chicken_bg.src} alt="Chicken" />
               <div className="flex justify-center flex-col relative w-full h-full lg:w-5/12 lg:max-w-5/12 px-4">
                 <div className="flex justify-center flex-col text-center border-y border-y-personal-neutralLight mb-12 py-4">
                   <TitleSecondary title="WHAT'S ON" />
@@ -56,7 +60,7 @@ export default function Home() {
                     tenetur unde autem animi sit possimus ad aliquam sint, ut
                     natus nulla delectus.
                   </p>
-                  <ButtonPrimary url="#">VIEW MENU</ButtonPrimary>
+                  <ButtonPrimary url="/our-menu">VIEW MENU</ButtonPrimary>
                 </div>
               </div>
             </div>
